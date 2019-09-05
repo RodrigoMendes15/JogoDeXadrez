@@ -1,4 +1,5 @@
 ﻿using System;
+using xadrez;
 using tabuleiro;
 
 namespace tabuleiro
@@ -12,7 +13,6 @@ namespace tabuleiro
                 Console.Write(8 - i + " ");
                 for(int j = 0; j < tab.Colunas; j++)
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
                     if (tab.peca(i,j) == null)
                     {
                         Console.Write("- ");
@@ -26,6 +26,14 @@ namespace tabuleiro
                 Console.WriteLine();
             }
             Console.WriteLine("  a b c d e f g h");
+        }
+
+        public static posicaoXadrex lerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new posicaoXadrex(coluna, linha);
         }
 
         public static void imprimirPeca(Peca peca)
