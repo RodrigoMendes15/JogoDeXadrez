@@ -22,8 +22,8 @@ namespace tabuleiro
 
         public static void imprimirTabuleiro(Tabuleiro tab, bool[,] posicoesPossiveis)
         {
-            ConsoleColor fundoOriginal = Console.BackgroundColor;
-            ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
+            ConsoleColor fundoOriginal = ConsoleColor.DarkCyan;
+            ConsoleColor fundoAlterado = ConsoleColor.DarkBlue;
 
             for (int i = 0; i < tab.Linhas; i++)
             {
@@ -70,7 +70,7 @@ namespace tabuleiro
                 else
                 {
                     ConsoleColor aux = Console.ForegroundColor;
-                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Black;
                     Console.Write(peca);
                     Console.ForegroundColor = aux;
                 }
